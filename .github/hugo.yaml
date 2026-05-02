@@ -2,12 +2,16 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"] 
+    branches: ["main"]
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Node.js 24 강제 사용
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
@@ -16,15 +20,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive 
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true 
+          extended: true
 
       - name: Build with Hugo
+        # 빌드 시 baseURL 명시
         run: hugo --minify
 
       - name: Upload artifact
