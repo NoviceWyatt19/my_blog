@@ -30,8 +30,7 @@ jobs:
           extended: true
 
       - name: Build with Hugo
-        # 빌드 시 baseURL 명시
-        run: hugo --minify
+        run: hugo --minify --buildDrafts --baseURL "https://novicewyatt19.github.io/my_blog/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
