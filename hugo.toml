@@ -1,3 +1,183 @@
-baseURL = 'https://novicewyatt19.github.io/my_blog/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://example.com"
+title = "Wyatt's Note"
+author = "wyatt"
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+theme = "Blonde"
+enableRobotsTXT = true
+
+# Please enable this feature if the site is available in Japanese, Chinese or Korean.
+#hasCJKLanguage = true
+
+[services]
+  [services.googleAnalytics]
+  # If you're using Google Analytics, you can enable this feature.
+  #id = "G-1234567890"
+
+  [services.disqus]
+  # Disqus Comment System
+  #shortname = "your-disqus-shortname"
+
+[params]
+# Base color of the website.
+# https://tailwindcss.com/docs/background-color
+base_color = "bg-gray-800"
+
+#Site description
+description = "Wyatt's Study Note"
+
+# The number of articles to be displayed on a single page.
+paginator_pages = 5
+
+# Enable this if you want the archive list to be in a drop-down format.
+archive_dropdown = "false"
+
+# Number of tags to be displayed.
+tagsLimit = 20
+
+# Number of recent posts to be displayed in the sidebar.
+recentLimit = 5
+
+# Dark mode by default : dark
+# Light mode by default : light
+darkmode = "light"
+
+# Logo image path (relative to static/ or an absolute URL).
+# If set, the logo image is shown in the header instead of the site title text.
+# logo = "/img/logo.png"
+
+  [params.ad]
+  # Google AdSense
+  # ex. ca-pub-0000000000000000
+  googleAdSense = ""
+
+  # ex. 000000000
+  adslot = ""
+
+  # Placement of ads
+  postTop = false
+  postBottom = false
+
+  [params.post]
+  # Show thumbnails
+  thumbnail = true
+
+  # Enable the "NO IMAGE" image.
+  noimage = true
+
+  # See the Tailwind CSS documentation to set it up.
+  # Recommended settings are h-32 to h-48.
+  # https://tailwindcss.com/docs/height
+  thumbnail_height = "lg:h-44"
+
+  # https://tailwindcss.com/docs/width
+  thumbnail_width = "lg:w-auto"
+
+  # Number of characters in description
+  description = "130"
+
+  [params.widgets]
+  # Display widgets
+  display = true
+
+  # Show widgets on mobile (default: false = desktop only)
+  mobile = true
+
+  # Order of widgets to display
+  widgets = ["search", "archive", "category", "tags", "social", "recent"]
+
+  [params.giscus]
+  # Giscus Comment System
+  # See https://giscus.app for setup instructions
+  #repo = "your-repo"
+  #repo_id = "your-repo-id"
+  #category = "Announcements"
+  #category_id = "your-category-id"
+  #mapping = "pathname"
+  #strict = "0"
+  #reactions_enabled = "1"
+  #emit_metadata = "0"
+  #input_position = "bottom"
+  #theme = "preferred_color_scheme"
+  #lang = "en"
+  #loading = "lazy"
+
+  [params.share]
+  # Enable SNS share buttons on posts
+  enable = true
+  # Uncomment and edit to limit which services are shown
+  # services = ["twitter", "facebook", "line", "linkedin", "whatsapp", "mail", "copy"]
+
+  # Social links widget
+  # Supported icons: github, twitter-x, bluesky, youtube, instagram, facebook,
+  #                  linkedin, mastodon, threads, tiktok, twitch, line, whatsapp,
+  #                  steam, vimeo, wechat, sina-weibo, mail, globe
+  [[params.social]]
+  name = "GitHub"
+  url = "https://github.com/novicewyatt19"
+  icon = "github"
+
+[menu]
+  [[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 3
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+archive = "archives"
+
+[privacy]
+  [privacy.vimeo]
+  disabled = false
+  simple = true
+
+  [privacy.x]
+  disabled = false
+  enableDNT = true
+  simple = true
+
+  [privacy.instagram]
+  disabled = false
+  simple = true
+
+  [privacy.youtube]
+  disabled = false
+  privacyEnhanced = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+    unsafe = true
+
+[build]
+  [build.buildStats]
+  enable = true
+  [[build.cachebusters]]
+  source = 'assets/notwatching/hugo_stats\.json'
+  target = 'css'
+
+[module]
+  [[module.mounts]]
+  source = 'assets'
+  target = 'assets'
+
+  [[module.mounts]]
+  disableWatch = true
+  source = 'hugo_stats.json'
+  target = 'assets/notwatching/hugo_stats.json'
