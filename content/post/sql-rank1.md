@@ -17,7 +17,7 @@ SQL 공부를 위해 주기적으로 프로그래머스에서 SQL 문제를 풀�
 오늘도 문제를 풀며 테스트 결과를 보기 위해 테스트 케이스를 돌리고 테스트가 패스된 김에 제출을 해보았는데 통과되었다. 그러나 나는 되려 의문에 빠졌다. 내가 생각하기에 이건 정답이 될 순 없다고 생각했기 때문이다.
 
 내가 풀었던 문제는 이것이고, 
-![Programmers SQL problem page about selecting the highest scorer with tied scores shown on a challenge page](https://school.programmers.co.kr/learn/courses/30/lessons/284527)
+[프로그래머스- 조건에 맞는 사원 정보 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284527)
 
 문제의 목적은
  > 테이블에서 2022년도 한해 평가 점수가 가장 높은 사원 정보를 조회하려 합니다 
